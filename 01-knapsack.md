@@ -24,3 +24,15 @@ There are 3 types of knapsack problems:
 3. Unbounded Knapsack
     - Similar to 0-1 Knapsack, but we can assume, we have unlimited supply of all the items.
     - We can add multiple occurances of the same item.
+
+### Problem Statement
+Given a set of n items numbered(i) from 1 up to n, each with a weight w[i] and a value v[i], along with a maximum weight capacity W, maximize the sum of the values of the items in the knapsack so that the sum of the weights is less than or equal to the knapsack's capacity.
+
+### Identify
+
+Optimal? -> Maximize values
+Choice? -> Either selecting an item or NOT selecting an item
+
+### Approach
+
+Start with Recursive solution, then memoize it and then you can choose to apply top down approach.
