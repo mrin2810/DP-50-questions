@@ -16,7 +16,7 @@
 
 ### Parent Problems in DP
 
-01. 0-1 Knapsack (6)
+01. [0-1 Knapsack](./01-knapsack.md) (6)
 02. Unbounded Knapsack (5)
 03. Fibonacci (7)
 04. Longest Common Subsequence (15)
