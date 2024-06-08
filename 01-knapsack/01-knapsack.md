@@ -98,7 +98,7 @@ Let's say we are deciding to create a matrix.
 #### How do we choose the dimensions of the matrix?
 Look at the inputs, the input which changes its size, grows smaller, it will define your matrix.
 So, in the above case, we know `W` and `n` are getting smaller in recursive calls.
-Therefore, we will need 2D matrix, and the dimensions will be `[W + 1][n + 1]`.
+Therefore, we will need 2D matrix, and the dimensions will be `[n + 1][W + 1]`.
 We want to set the entire matrix to `-1`.
 
 Then, before making a recursive call, we will check the matrix, to see if the value is already calculated?
@@ -145,11 +145,42 @@ There is not much of a change in memoization. But we can move to Top Down now.
 
 ### Top-down Approach
 This is usually called "Real" Dynamic Programming. We will use old concepts to write top-down approach.
-Uptil now, we wrote recursive code, and converted it to memoized code. Now we are all set to move this code to Top Down Approach.
+Until now, we wrote recursive code, and converted it to memoized code. 
+Now we are all set to move this code to Top-down Approach.
+
 #### What does that mean? 
 We want to avoid making recursive call entirely. 
-(This is used when the number of recursive calls can cause stack overflow problem.)
-
+(This is used when the number of recursive calls can cause stack overflow problem. This is a rare case.)
 ![topDown.png](topDown.png)
 
+#### Process
+We can come to top-down, from recursive code as well. 
+1. RC 
+2. RC + Table
+3. Table
 
+We need to make a table with dimensions `[n + 1][W  + 1]` the thinking should be similar to what we did for memoization.
+We will fill this table in 2 steps.
+1. Initialize
+2. Recursive Calls --> Iterative Form
+
+Dimension should be `n + 1 X W + 1` Because we want one row and column for base case or initialization.
+
+In our Example:
+```java
+int[] wt = new int[]{1, 3, 4, 5};
+int[] val = new int[]{1, 4, 5, 7};
+int n = 4;
+int W = 7;
+```
+In our table the value at `dp[i][j]` will denote what the o/p of function call with n = i and W = j.
+
+![what this table stores](explain.png)
+
+The recursive function's base condition converts to top-down's initialization.
+So, our n == 0 and W == 0 => return 0; changes to the first row to be 0s. and first column to be 1s.
+
+Recursive Function has to be the perfect! for everything else to work.
+![img.png](img.png)
+
+Now We will go to 
