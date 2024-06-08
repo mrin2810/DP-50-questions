@@ -22,7 +22,7 @@ public class Knapsack {
         int W = 7;
 
         // Recursive
-        System.out.println(knapsack(wt, val, W, n));
+        System.out.println("knapsack with recursion: " + knapsack(wt, val, W, n));
 
         // Memoized
         // initialize the dp matrix with -1
@@ -33,7 +33,9 @@ public class Knapsack {
         }
 
         // Recursive Memoized Function
-        System.out.println(knapsack_memo(wt, val, W, n));
+        System.out.println("knapsack with memoization: " + knapsack_memo(wt, val, W, n));
+
+        System.out.println("knapsack with top-down: " + knapsack_top_down(wt, val, W, n));
     }
 
     private static int knapsack_memo(int[] wt, int[] val, int W, int n) {
@@ -53,6 +55,28 @@ public class Knapsack {
         } else {
             // Save the solution
             dp[n][W] = exclude;
+        }
+        return dp[n][W];
+    }
+
+    private static int knapsack_top_down(int[] wt, int[] val, int W, int n) {
+        // Setup
+        int[][] dp = new int[n + 1][W + 1];
+        for(int i = 0; i < dp.length; i++) {
+            for(int j = 0; j < dp[i].length; j++) {
+                if (i == 0 || j == 0) {
+                    dp[i][j] = 0;
+                }
+            }
+        }
+        for (int i = 1; i < n + 1; i++) {
+            for (int j = 1; j < W + 1; j++) {
+                if (wt[i - 1] <= j) {
+                    dp[i][j] = Math.max(dp[i - 1][j], val[i - 1] + dp[i - 1][j - wt[i - 1]]);
+                } else {
+                    dp[i][j] = dp[i - 1][j];
+                }
+            }
         }
         return dp[n][W];
     }

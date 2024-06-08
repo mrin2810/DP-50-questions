@@ -183,4 +183,48 @@ So, our n == 0 and W == 0 => return 0; changes to the first row to be 0s. and fi
 Recursive Function has to be the perfect! for everything else to work.
 ![img.png](img.png)
 
-Now We will go to 
+```java
+//if (n == 0 || W == 0) return 0
+
+for(int i = 0; i < n + 1; i++) {
+    for (int j = 0; j < W + 1; j++) {
+        if (i == 0 || j == 0) {
+            dp[i][j] = 0;
+        }
+    }        
+}
+```
+
+Now lets move to recursive part.
+We had written this code based on choice diagram. So, we will convert it to iterative form now.
+Let us do Recursive V/s Top Down
+
+Recursive
+if (wt[n - 1][W - 1] <= W) {
+   return max(val[n - 1] + knapsack(wt, val, W - wt[n - 1], n - 1), knapsack(wt, val, W, n - 1));
+} else {
+   return knapsack(wt, val, W, n - 1);
+}
+ 
+TopDown
+if (wt[n - 1][W - 1] <= W) {
+   t[n][W] = max(val[n - 1] + dp[n - 1][W - wt[n - 1]], dp[n - 1][W]);
+} else {
+   t[n][W] = dp[n - 1][W];
+}
+return t[n][W];
+
+Convert, n => i and W => j (except for the loop code lines) also, run a loop to fill in each of the boxes.
+```
+for (int i = 1; i < n + 1; i++) {
+   for (int j = 1; j < W + 1; j++) {
+      if (wt[i - 1] <= j) {
+         dp[i][j] = max(val[i - 1] + dp[i - 1][j - wt[i - 1]], dp[i - 1][j]);
+      } else {
+         dp[i][j] = dp[i - 1][j];
+      }  
+   }
+}
+```
+
+
