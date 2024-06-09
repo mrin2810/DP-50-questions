@@ -4,7 +4,7 @@
 
 0. [0/1 Knapsack](00-knapsack/Readme.md)
 1. [Subset Sum](01-subsetSum/Readme.md)
-2. Equal Sum Partition
+2. [Equal Sum Partition](02-equalSumPartition/Readme.md)
 3. Count of Subset Sum
 4. Minimum Subset Sum Difference
 5. Target Sum

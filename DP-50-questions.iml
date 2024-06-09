@@ -5,6 +5,7 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/01-knapsack/00-knapsack/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/01-knapsack/01-subsetSum/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/01-knapsack/02-equalSumPartition/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
