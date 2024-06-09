@@ -5,6 +5,8 @@
 Given an array arr[] of size N, check if it can be partitioned into two 
 parts such that the sum of elements in both parts is the same.
 
+https://www.geeksforgeeks.org/problems/subset-sum-problem2014/1
+
 Example 1:
 ```
 Input:
@@ -123,6 +125,10 @@ class Solution {
         return dp[n][sum / 2]; 
     }
 }
-
 ```
+
+We have the same code as subsetSum, only difference being sum is chopped up in half.
+
+### Solution
+1. [Java](./src/EqualSumPartition.java)
 
