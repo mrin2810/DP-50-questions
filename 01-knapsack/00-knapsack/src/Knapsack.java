@@ -15,28 +15,6 @@ public class Knapsack {
             return exclude;
         }
     }
-    public static void main(String[] args) {
-        int n = 4;
-        int[] wt = new int[]{1, 3, 4, 5};
-        int[] val = new int[]{1, 4, 5, 7};
-        int W = 7;
-
-        // Recursive
-        System.out.println("knapsack with recursion: " + knapsack(wt, val, W, n));
-
-        // Memoized
-        // initialize the dp matrix with -1
-        for(int i = 0; i < dp.length; i++) {
-            for (int j = 0; j < dp[i].length; j++) {
-                dp[i][j] = -1;
-            }
-        }
-
-        // Recursive Memoized Function
-        System.out.println("knapsack with memoization: " + knapsack_memo(wt, val, W, n));
-
-        System.out.println("knapsack with top-down: " + knapsack_top_down(wt, val, W, n));
-    }
 
     private static int knapsack_memo(int[] wt, int[] val, int W, int n) {
         // Base Case
@@ -79,5 +57,28 @@ public class Knapsack {
             }
         }
         return dp[n][W];
+    }
+
+    public static void main(String[] args) {
+        int n = 4;
+        int[] wt = new int[]{1, 3, 4, 5};
+        int[] val = new int[]{1, 4, 5, 7};
+        int W = 7;
+
+        // Recursive
+        System.out.println("knapsack with recursion: " + knapsack(wt, val, W, n));
+
+        // Memoized
+        // initialize the dp matrix with -1
+        for(int i = 0; i < dp.length; i++) {
+            for (int j = 0; j < dp[i].length; j++) {
+                dp[i][j] = -1;
+            }
+        }
+
+        // Recursive Memoized Function
+        System.out.println("knapsack with memoization: " + knapsack_memo(wt, val, W, n));
+
+        System.out.println("knapsack with top-down: " + knapsack_top_down(wt, val, W, n));
     }
 }

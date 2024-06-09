@@ -1,32 +1,8 @@
-# 0-1 knapsack
-
-### 6 Related Problems
-
-1. Subset Sum
-2. Equal Sum Partition
-3. Count of Subset Sum
-4. Minimum Subset Sum Difference
-5. Target Sum
-6. Number of subsets with given difference
-
-### What is Knapsack Problem?
-We are given some number of items, each associated with a certain weight and a value. We are also given a bag(knapsack) with certain capacity(W).
-
-In this setup, constrain is the capacity(W). We can only have items that are less than or equal to W. But at the same time we have to choose items which maximize the total value.
-
-There are 3 types of knapsack problems:
-1. Fractional Knapsack (Greedy) 
-    - We are allowed to add a "fraction" of an item with fraction of the value will be counted as well.
-    - This is a Greedy Problem NOT DP.
-2. 0-1 Knapsack
-    - We are only allowed to either add an entire item or we can not add the item at all.
-    - No concept of fraction of an Item.
-3. Unbounded Knapsack
-    - Similar to 0-1 Knapsack, but we can assume, we have unlimited supply of all the items.
-    - We can add multiple occurances of the same item.
+# [<](../Readme.md) 00 - 0/1 Knapsack Problem
 
 ### Problem Statement
 Given a set of n items numbered(i) from 1 up to n, each with a weight w[i] and a value v[i], along with a maximum weight capacity W, maximize the sum of the values of the items in the knapsack so that the sum of the weights is less than or equal to the knapsack's capacity.
+https://www.geeksforgeeks.org/problems/0-1-knapsack-problem0945/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=bottom_sticky_on_article
 
 ### Identify
 
@@ -51,19 +27,19 @@ For each item(i):
 - else:
     - we have no choice, we cannot include the item.
 
-#### Function Signature: 
+#### Function Signature:
 
 ```java
 public int knapsack(int wt[], int val[], int W, int n);
 ```
 In this function, we can have some skeleton code.
-1. Base Case:  
+1. Base Case:
     - Think of the smallest valid input.
     - n can be 0 and W can be 0.
     - So, this becomes our base case.
     - If we have no items -> profit = 0
     - Similarly, if we have no W -> profit = 0
-2. Choice Diagram: 
+2. Choice Diagram:
     - Code the choice diagram (Easiest)
     - Simply convert the choice diagram that we drew in code.
     - Recursive call must always be on a smaller input.
@@ -85,6 +61,7 @@ public static int knapsack(int[] wt, int[] val, int W, int n) {
    }
 }
 ```
+
 ### Memoize the recursive code
 
 Memoization: To avoid making overlapping recursive calls. Or we can say, we are keeping track of solved sub-problems.
@@ -94,7 +71,7 @@ We can then move to top-down approach or not because memoized code is of similar
 
 To memoize the code above, we have to have data structure that can store the memoized values.
 
-Let's say we are deciding to create a matrix. 
+Let's say we are deciding to create a matrix.
 #### How do we choose the dimensions of the matrix?
 Look at the inputs, the input which changes its size, grows smaller, it will define your matrix.
 So, in the above case, we know `W` and `n` are getting smaller in recursive calls.
@@ -145,17 +122,17 @@ There is not much of a change in memoization. But we can move to Top Down now.
 
 ### Top-down Approach
 This is usually called "Real" Dynamic Programming. We will use old concepts to write top-down approach.
-Until now, we wrote recursive code, and converted it to memoized code. 
+Until now, we wrote recursive code, and converted it to memoized code.
 Now we are all set to move this code to Top-down Approach.
 
-#### What does that mean? 
-We want to avoid making recursive call entirely. 
+#### What does that mean?
+We want to avoid making recursive call entirely.
 (This is used when the number of recursive calls can cause stack overflow problem. This is a rare case.)
 ![topDown.png](topDown.png)
 
 #### Process
-We can come to top-down, from recursive code as well. 
-1. RC 
+We can come to top-down, from recursive code as well.
+1. RC
 2. RC + Table
 3. Table
 
@@ -201,16 +178,16 @@ Let us do Recursive V/s Top Down
 
 Recursive
 if (wt[n - 1][W - 1] <= W) {
-   return max(val[n - 1] + knapsack(wt, val, W - wt[n - 1], n - 1), knapsack(wt, val, W, n - 1));
+return max(val[n - 1] + knapsack(wt, val, W - wt[n - 1], n - 1), knapsack(wt, val, W, n - 1));
 } else {
-   return knapsack(wt, val, W, n - 1);
+return knapsack(wt, val, W, n - 1);
 }
- 
+
 TopDown
 if (wt[n - 1][W - 1] <= W) {
-   t[n][W] = max(val[n - 1] + dp[n - 1][W - wt[n - 1]], dp[n - 1][W]);
+t[n][W] = max(val[n - 1] + dp[n - 1][W - wt[n - 1]], dp[n - 1][W]);
 } else {
-   t[n][W] = dp[n - 1][W];
+t[n][W] = dp[n - 1][W];
 }
 return t[n][W];
 
@@ -226,5 +203,3 @@ for (int i = 1; i < n + 1; i++) {
    }
 }
 ```
-
-
