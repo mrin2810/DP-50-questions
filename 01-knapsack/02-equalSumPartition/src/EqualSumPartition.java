@@ -20,7 +20,7 @@ public class EqualSumPartition {
         }
 
         for (int i = 1; i < n + 1; i++) {
-            for (int j = 0; j < (sum / 2) + 1; j++) {
+            for (int j = 1; j < (sum / 2) + 1; j++) {
                 if (arr[i - 1] <= j) {
                     // have choice, so if any one of them is true the ans should be true.
                     dp[i][j] = dp[i - 1][j - arr[i - 1]] || dp[i - 1][j];
