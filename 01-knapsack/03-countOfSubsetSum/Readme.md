@@ -50,7 +50,7 @@ This also means, no matter what, we have to iterate through the entire tree. (  
 
 ### Code
 Previously
-```java
+```
 if (arr[i - 1] <= j) {
         dp[i][j] = dp[i - 1][j] || dp[i - 1][j - arr[i - 1]]
 } else {
@@ -92,3 +92,6 @@ class Solution {
 ## Return type
 Here we need to change the data type from boolean to int, which will store number of subsets. if the value is 0.
 It means that there is no subset which is present.
+
+### Code
+1. [Java](./src/PerfectSum.java)
