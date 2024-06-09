@@ -203,3 +203,7 @@ for (int i = 1; i < n + 1; i++) {
    }
 }
 ```
+
+### Solution
+
+1. [Java](./src/Knapsack.java)

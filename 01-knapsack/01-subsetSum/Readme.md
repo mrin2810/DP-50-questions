@@ -88,3 +88,7 @@ public static void main(String[] args) {
 }
 ```
 
+### Solution
+
+1. [Java](./src/SubsetSum.java)
+
