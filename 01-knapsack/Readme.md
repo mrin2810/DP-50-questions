@@ -7,8 +7,8 @@
 2. [Equal Sum Partition](02-equalSumPartition/Readme.md)
 3. [Count of Subset Sum](03-countOfSubsetSum/Readme.md)
 4. [Minimum Subset Sum Difference](04-minSubsetSumDiff/Readme.md)
-5. Target Sum
-6. Number of subsets with given difference
+5. [Number of subsets with given difference](05-countSubsetsWithGivenDiff/Readme.md)
+6. Target Sum
 
 ### What is Knapsack Problem?
 We are given some number of items, each associated with a certain weight and a value. We are also given a bag(knapsack) with certain capacity(W).

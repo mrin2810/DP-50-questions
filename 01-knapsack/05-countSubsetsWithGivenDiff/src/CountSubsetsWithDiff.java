@@ -1,4 +1,5 @@
-public class PerfectSum {
+public class CountSubsetsWithDiff {
+
     public static int perfectSum(int arr[],int n, int sum)
     {
         // Initialize DP
@@ -24,11 +25,20 @@ public class PerfectSum {
         return dp[n][sum];
     }
 
-    public static void main(String[] args) {
-        int[] arr = {9, 7, 0, 3, 9, 8, 6, 5, 7, 6};
-        int n = arr.length;
-        int sum = 31;
+    public static int countPartitions(int n, int d, int[] arr) {
+        int sum = 0;
+        for (int i = 0; i < n; i++) {
+            sum += arr[i];
+        }
+        int s1 = (sum - d) / 2;
 
-        System.out.println(perfectSum(arr, n , sum));
+        return perfectSum(arr, n, s1);
+    }
+
+    public static void main(String[] args) {
+        int n = 4;
+        int d = 0;
+        int arr[] = {1, 1, 1, 1};
+        System.out.println(countPartitions(n, d, arr));
     }
 }
