@@ -19,3 +19,6 @@ Now, we can reuse count of subset sum solution here.
 ## Solve using already solved problem
 Simply first calculate what should be S1. Then use countOfSubsetSum and return the answer.
 ![img_1.png](img_1.png) 
+
+## Code
+1. [Java](./src/CountSubsetsWithDiff.java)

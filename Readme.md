@@ -17,9 +17,9 @@
 ### Parent Problems in DP
 
 01. [0-1 Knapsack](./01-knapsack.md) (6)
-02. Unbounded Knapsack (5)
-03. Fibonacci (7)
-04. Longest Common Subsequence (15)
+02. [Longest Common Subsequence](03-LCS/Readme.md) (15)
+03. Unbounded Knapsack (5)
+04. Fibonacci (7)
 05. Longest Increasing Subsequence (10)
 06. Kadane's Algorithm (6)
 07. Matrix Chain Multiplication (7)
