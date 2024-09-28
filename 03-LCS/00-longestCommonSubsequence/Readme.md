@@ -14,4 +14,49 @@ Output: 3
 ```
 
 
-## 
+## What is a subsequence?
+
+A subsequence means, sequence of characters which may not necessarily be a substring.
+![img.png](img.png)
+## Ans = 4 (length of the subsequence)
+
+## Base Condition
+
+- The strings length is 0?
+- Smallest Valid input.
+
+```java
+if (n == 0 || m == 0) return 0;
+```
+
+### Choice Diagram
+
+- What choices do we have?
+  - X: abcdgh
+  - Y: abedfh
+- When characters from the string match, we have 1 choice,
+- However, when they do not match we have 2 choices.
+
+The choice diagram will look like this:
+![img_1.png](img_1.png)
+
+### Let's figure out parameters
+1. we will pass 4 params
+    - String x
+    - String y
+    - Length of x
+    - Length of y
+
+```java
+int LCS(String x, String y, int m, int n) {
+    if (n == 0 || m == 0) return 0;
+    if (x[m - 1] == y[n - 1]) {
+        // Plus 1 because character is common
+        return 1 + LCS(x, y, m - 1, n - 1);
+    } else {
+        // No Plus 1 because character is not common
+        return Math.max(LCS(x, y, m - 1, n), LCS(x, y, m, n - 1);
+    }
+}
+
+```

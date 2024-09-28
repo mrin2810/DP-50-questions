@@ -55,3 +55,8 @@ if (coin[i-1] <= j) {
         t[i][j] = t[i - 1][j]
 }
 ```
+
+[Java Code](./src/CoinChange2.java)
+
+_Note: We do IntMax -1 because when we return the answer we add 1, 
+so it will return IntMax when the answer should be intMax._

@@ -14,6 +14,7 @@
       <sourceFolder url="file://$MODULE_DIR$/02-UnboundedKnapsack/01-rodcutting-problem/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/02-UnboundedKnapsack/02-coin-change-problem/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/02-UnboundedKnapsack/03-coin-change-problem/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/03-LCS/00-longestCommonSubsequence/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
