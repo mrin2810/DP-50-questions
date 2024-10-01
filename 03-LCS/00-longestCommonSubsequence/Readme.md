@@ -95,3 +95,10 @@ for (int i = 0; i < m + 1; i++) {
         }}
 ```
 ![img_3.png](img_3.png)
+
+#### Modification
+ - replace `lcs2(s1, s2, m - 1, n - 1, dp);` with dp[i-1][j-1]
+ - replace `lcs2(s1, s2, m - 1, n)` with dp[i - 1][j]
+ - replace `lcs2(s1, s2, m, n - 1)` with dp[i][j - 1]
+
+Code refer the to the file LCS DP.
