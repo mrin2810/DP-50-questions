@@ -94,7 +94,4 @@ for (int i = 0; i < m + 1; i++) {
             t[i][j] = -1;
         }}
 ```
-
-```java
-// Modifications
-```
+![img_3.png](img_3.png)
