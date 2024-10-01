@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class LCSMemoized {
     static int lcs2(String s1, String s2, int m, int n, int[][] dp) {
         if (m == 0 || n == 0) {
