@@ -60,3 +60,41 @@ int LCS(String x, String y, int m, int n) {
 }
 
 ```
+
+### Memoization
+
+#### Why we need memoization?
+
+- We need to memoize the function because there can be repeated recursive calls.
+- we need to memoize only in case of multiple recursive calls
+- We don't want to solve already solved sub-problems.
+
+We have learnt from alvin as well. That we dont want to solve already solved problems.
+
+#### How to know the table size?
+
+For determining the table size, we need to first find out what are the variables that affect the table?
+in this case we have strings X, Y, m, n. (Changing variables in the recursive call).
+
+For our problem we will use m and n, because these are being changed in the recursive call.
+
+![img_2.png](img_2.png)
+
+We have (m + 1) X (n + 1) as the size of the table.
+To make sure we have the last value of the table to be `t[m][n]`.
+
+#### How will we use the table?
+
+Before making a recursive call, we have to check if this table has the solution already.
+So, for indicating, we will initialize the metrix with -1
+Do this in the main function.
+```java
+for (int i = 0; i < m + 1; i++) {
+        for (int j = 0; j < n + 1; j++){
+            t[i][j] = -1;
+        }}
+```
+
+```java
+// Modifications
+```
