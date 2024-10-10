@@ -3,7 +3,7 @@
 ## Related Problems (15)
 
 0. [Longest Common Subsequence](./00-longestCommonSubsequence/Readme.md)
-1. Longest Common Substring
+1. [Longest Common Substring](./01-longestCommonSubstring/Readme.md)
 2. Print LCS
 3. Shortest Common Supersequence
 4. Print SCS
