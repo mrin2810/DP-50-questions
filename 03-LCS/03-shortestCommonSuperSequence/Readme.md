@@ -1,8 +1,8 @@
 # [<](../Readme.md) 03 Shortest Common Super Sequence
 
-## [Problem Statement](https://leetcode.com/problems/shortest-common-supersequence/description/)
+## Problem Statement
 Given two strings `str1` and `str2`, return the shortest string that has both `str1` and `str2` as subsequences. 
-If there are multiple valid strings, return any of them.
+If there are multiple valid strings, return the length of the "super sequence".
 
 ### What is subsequence?
 A string `s` is a subsequence of string `t` if deleting some number of characters from `t` (possibly 0) results in the string `s`.
@@ -11,13 +11,8 @@ A string `s` is a subsequence of string `t` if deleting some number of character
 ### Example 1:
 ```text
 Input: str1 = "geek", str2 = "eke"
-Output: "geeke"
+Output: 5
 ```
-
-### Explanation: 
-str1 = "abac" is a subsequence of "cabac" because we can delete the first "c".
-str2 = "cab" is a subsequence of "cabac" because we can delete the last "ac".
-The answer provided is the shortest such string that satisfies these properties.
 
 ### Constraints:
 ```text
@@ -28,7 +23,7 @@ str1 and str2 consist of lowercase English letters.
 ### signature
 ```java
 class Solution {
-    public String shortestCommonSupersequence(String str1, String str2) {
+    public int shortestCommonSupersequence(String str1, String str2) {
 
     }
 }

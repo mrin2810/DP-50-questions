@@ -1,5 +1,5 @@
 public class SCSDP {
-    static int scs(String s1, String s2, int m, int n) {
+    static int shortestCommonSupersequence(String s1, String s2, int m, int n) {
         int[][] dp = new int[m + 1][n + 1];
         // Initialize
         for (int i = 1; i <= m; i++) {
@@ -29,7 +29,7 @@ public class SCSDP {
         String s2 = "GXTXAYB";
         int m = s1.length();
         int n = s2.length();
-        System.out.println(scs(s1, s2, m, n));
+        System.out.println(shortestCommonSupersequence(s1, s2, m, n));
 
     }
 }
