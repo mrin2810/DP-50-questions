@@ -17,6 +17,7 @@
       <sourceFolder url="file://$MODULE_DIR$/03-LCS/00-longestCommonSubsequence/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/03-LCS/01-longestCommonSubstring/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/03-LCS/02-printLongestCommonSubsequence/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/03-LCS/03-shortestCommonSuperSequence/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
