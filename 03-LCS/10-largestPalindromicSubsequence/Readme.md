@@ -1,4 +1,4 @@
-# [<](../Readme.md) 05 Largest Palindromic Subsequence
+# [<](../Readme.md) 10 Largest Palindromic Subsequence
 
 This is a pattern in itself. But we can relate LCS to this Longest Palindromic Subsequence.
 

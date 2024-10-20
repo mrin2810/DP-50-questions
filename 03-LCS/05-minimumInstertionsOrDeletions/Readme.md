@@ -1,4 +1,4 @@
-# [<](../Readme.md) 04 Minimum Number of insertions and deletions
+# [<](../Readme.md) 05 Minimum Number of insertions and deletions
 
 ## [Problem Statement](https://www.geeksforgeeks.org/problems/minimum-number-of-deletions-and-insertions0209/1)
 Given two strings `str1` and `str2`. The task is to remove or insert the minimum number of characters from/in `str1` so as to transform it into `str2`. 
