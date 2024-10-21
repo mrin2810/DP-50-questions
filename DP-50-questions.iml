@@ -18,6 +18,7 @@
       <sourceFolder url="file://$MODULE_DIR$/03-LCS/01-longestCommonSubstring/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/03-LCS/02-printLongestCommonSubsequence/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/03-LCS/03-shortestCommonSuperSequence/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/03-LCS/04-printShortestCommonSubsequence/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/03-LCS/05-minimumInstertionsOrDeletions/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/03-LCS/10-largestPalindromicSubsequence/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/03-LCS/13-minNumOfDeletionToMakePalindrome/src" isTestSource="false" />
