@@ -27,14 +27,15 @@ class Solution {
 - What is the easiest way to write a super sequence?
     - We can simply concatenate both the strings.
     - But in doing that we are repeating some letters.
-    - ![img_1.png](img_1.png)
     - Notice the letters that repeat are nothing but LCS of the 2 strings.
 - This is time we have to print the SCS
 - Similar to printLCS ===|
 - How? 
 - We will first use printLCS to get the actual LCS.
 - To modify this, we will add the chars which are not common to the answer string.
-
+![img.png](img.png)
+![img_1.png](img_1.png)
+![img_2.png](img_2.png)
 ## Code Variation
 - From printLCS
 ```java
