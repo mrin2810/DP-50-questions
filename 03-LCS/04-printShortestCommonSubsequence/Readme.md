@@ -63,6 +63,7 @@ public class PrintLCS{
                 }
             }
         }
+        // Print remaining characters form any string that we did not traverse completely
         if (i != 0) subsequence = str1.substring(0, i) + subsequence;
         if (j != 0) subsequence = str2.substring(0, j) + subsequence;
         return subsequence;
