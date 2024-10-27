@@ -4,6 +4,8 @@
 Given two strings `str1` and `str2`, return the shortest string that has both `str1` and `str2` as subsequences.
 If there are multiple valid strings, print the resulting SCS.
 
+[Leetcode](https://leetcode.com/problems/shortest-common-supersequence/)
+
 ### What is subsequence?
 A string `s` is a subsequence of string `t` if deleting some number of characters from `t` (possibly 0) results in the string `s`.
 ![img.png](img.png)
