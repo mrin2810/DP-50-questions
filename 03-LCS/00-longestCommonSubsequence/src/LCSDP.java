@@ -1,5 +1,7 @@
 public class LCSDP {
-    static int lcs3(String s1, String s2, int m, int n) {
+    static int lcs3(String text1, String text2) {
+        int m = text1.length();
+        int n = text2.length();
         int[][] dp = new int[m + 1][n + 1];
         // Initialize
         for (int i = 1; i <= m; i++) {
@@ -13,7 +15,7 @@ public class LCSDP {
 
         for (int i = 1; i <= m; i++) {
             for (int j = 1; j <= n; j++) {
-                if (s1.charAt(i - 1) == s2.charAt(j - 1)) {
+                if (text1.charAt(i - 1) == text2.charAt(j - 1)) {
                     dp[i][j] = dp[i - 1][j - 1] + 1;
                 } else {
                     dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
@@ -29,7 +31,7 @@ public class LCSDP {
         String s2 = "dmhanashree";
         int m = s1.length();
         int n = s2.length();
-        System.out.println(lcs3(s1, s2, m, n));
+        System.out.println(lcs3(s1, s2));
 
     }
 }

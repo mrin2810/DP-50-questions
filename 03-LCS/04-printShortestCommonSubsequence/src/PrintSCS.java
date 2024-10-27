@@ -42,14 +42,20 @@ public class PrintSCS{
                 }
             }
         }
-        if (j == 0) subsequence = str1.substring(0, i) + subsequence;
-        if (i == 0) subsequence = str2.substring(0, j) + subsequence;
+        while (i > 0) {
+            subsequence = str1.charAt(i - 1) + subsequence;
+            i--;
+        }
+        while (j > 0) {
+            subsequence = str2.charAt(j - 1) + subsequence;
+            j--;
+        }
         return subsequence;
     }
 
     public static void main(String[] args) {
-        String s1 = "mrinmayee";
-        String s2 = "dmhanashree";
+        String s1 = "HELLO";
+        String s2 = "GEEK";
         System.out.println(printShortestCommonSuperSequence(s1, s2));
     }
 }
