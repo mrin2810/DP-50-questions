@@ -5,6 +5,8 @@ This is a pattern in itself. But we can relate LCS to this Longest Palindromic S
 ## [Problem Statement](https://www.geeksforgeeks.org/problems/longest-palindromic-subsequence-1612327878/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=practice_card)
 Given a String, find the longest palindromic subsequence.
 
+[LeetCode](https://leetcode.com/problems/longest-palindromic-subsequence/description/)
+
 _NOTE: Subsequence of a given sequence is a sequence that can be derived from the given sequence by deleting some or no elements without changing the order of the remaining elements_
 
 ```text
