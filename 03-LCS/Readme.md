@@ -8,7 +8,7 @@
 3. [Shortest Common Supersequence](./03-shortestCommonSuperSequence/Readme.md)
 4. [Print SCS](./04-printShortestCommonSubsequence/Readme.md)
 5. [Min # of insertion and deletions to go from a->b](./05-minimumInstertionsOrDeletions/Readme.md)
-6. Longest Repeating Subsequence
+6. [Longest Repeating Subsequence](./06-longestRepeatingSubsequence/Readme.md)
 7. Length of Largest subsequence of a which is a subsequence of b.
 8. Subsequence pattern matching
 9. Count how many times a appears as a subsequence in b

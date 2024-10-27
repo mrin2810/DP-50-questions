@@ -22,6 +22,7 @@
       <sourceFolder url="file://$MODULE_DIR$/03-LCS/05-minimumInstertionsOrDeletions/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/03-LCS/10-largestPalindromicSubsequence/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/03-LCS/13-minNumOfDeletionToMakePalindrome/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/03-LCS/06-longestRepeatingSubsequence/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
