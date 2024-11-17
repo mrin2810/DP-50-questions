@@ -16,4 +16,4 @@
 11. largest palindromic substring
 12. count of palindromic substring
 13. [min # deletions to make it a palindrome](./13-minNumOfDeletionToMakePalindrome/Readme.md)
-14. min # of insertions to make it a palindrome 
+14. [min # of insertions to make it a palindrome](./14-minNumOfInsertionsToMakePalindrome/Readme.md)
