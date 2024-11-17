@@ -39,4 +39,4 @@ We can only skip letters from one string.
 - else return False
 
 ## Completed Code
-[Java Code](./src/)
+[Java Code](./src/SPMDP.java)
