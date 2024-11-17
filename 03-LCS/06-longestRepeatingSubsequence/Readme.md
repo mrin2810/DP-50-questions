@@ -1,4 +1,4 @@
-# [<](../Readme.md) 13 Minimum Number of deletions to make it a palindrome
+# [<](../Readme.md) 06 Longest Repeating Subsequence 
 
 ## [Problem Statement](https://www.geeksforgeeks.org/longest-repeated-subsequence/)
 
@@ -26,4 +26,4 @@ Let's think how would we find a repeating subsequence?
 - This variation would make the difference and we would get the LCS.
 
 ## Completed Code
-link
+[Java Code](./src/LRSDP.java)

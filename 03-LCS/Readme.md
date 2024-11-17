@@ -10,7 +10,7 @@
 5. [Min # of insertion and deletions to go from a->b](./05-minimumInstertionsOrDeletions/Readme.md)
 6. [Longest Repeating Subsequence](./06-longestRepeatingSubsequence/Readme.md)
 7. Length of Largest subsequence of a which is a subsequence of b.
-8. Subsequence pattern matching
+8. [Subsequence pattern matching](./08-sequencePatternMatching/Readme.md)
 9. Count how many times a appears as a subsequence in b
 10. [longest palindromic subsequence](./10-largestPalindromicSubsequence/Readme.md)
 11. largest palindromic substring
