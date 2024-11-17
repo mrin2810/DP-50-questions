@@ -40,7 +40,7 @@ public class SPMDP {
                 }
             }
         }
-        return subsequence.equals(str1);
+        return subsequence.length() == str1.length();
     }
 
     public static void main(String[] args) {

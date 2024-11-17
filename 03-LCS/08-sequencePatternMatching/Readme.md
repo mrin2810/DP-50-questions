@@ -37,6 +37,9 @@ We can only skip letters from one string.
 ## Variation
 - if the string is equal to one of the input strings, return True
 - else return False
+We can optimize this a little by ONLY checking the length and not the entire string...
+- Because, if the length of the subsequence matches with the first string
+- It has to have all the letters... LCS range is from 0 to length of the smaller string. 
 
 ## Completed Code
 [Java Code](./src/SPMDP.java)
