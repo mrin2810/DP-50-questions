@@ -7,6 +7,7 @@ Given the dimension of a sequence of matrices in an array arr[], where the dimen
 ![alt text](Capture.PNG)
 ![alt 1text](Capture1.PNG)
 ![alt 1text](Capture2.PNG)
+![alt 1text](Capture3.PNG)
 
 
 ## Template Code
