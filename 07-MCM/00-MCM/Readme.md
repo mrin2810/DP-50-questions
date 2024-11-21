@@ -8,10 +8,15 @@ Given the dimension of a sequence of matrices in an array arr[], where the dimen
 ![alt 1text](Capture1.PNG)
 ![alt 1text](Capture2.PNG)
 
+## Identify
+- We don't know what combination is correct!
+- We have to try each combination and solve it recursively to reach to a solution...
+- We need to follow steps explained in the format code...
+- We have to return the cost
 
 ## Template Code
 ```java
-int solve(int arr[], int i, int j) {
+int solve(int[] arr, int i, int j) {
     // Base Condition
     if (j < i) {
         return 0;
@@ -26,7 +31,40 @@ int solve(int arr[], int i, int j) {
 }
 ```
 
+## 1. Choice of `i` and `j`
+- We have to choose i and j
+- looking at how we calculate the dimensions
+- i = 1, j = size - 1
+
+## 2. Find base condition
+- Let's check i == j:
+- This gives list of size 1
+- Can this be a matrix? No, so this is the invalid input becomes our base condition
+
+## 3. find range of `k`
+- We have to make sure 2 partitions that we have are going to have should be valid
+- if K ranges from i to j: 2nd partition will be empty array
+- if K ranges from i to j - 1: 2nd partition will be arr with 1 element
+
+## Calculate the cost of resultant matrix
+- How to get the cost of final last multiplication?
+- 
+
 ## Code using Template
 ```java
+class MCM{
+    public static int solve(int[] arr, int i, int j) {
+        // Base Condition j <= i (arr size 1 or less)
+        if (j <= i) return 0;
+        
+        int ans = Integer.MAX_VALUE;
+        // Else, try all the possible values for `k`
+        for (int k = 0; k < j; k++) {
+            // Temp 1 answer + Temp answer 2
+            solve(arr, i, k) +
+            solve(arr, k + 1, j);
+        }
+    }
+}
 
 ```
