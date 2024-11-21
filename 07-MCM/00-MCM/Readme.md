@@ -1,20 +1,10 @@
 # [<](../Readme.md) 00 Matrix Chain Multiplication
 
-## Problem Statement
+## [Problem Statement](https://www.geeksforgeeks.org/matrix-chain-multiplication-dp-8/)
+Given the dimension of a sequence of matrices in an array arr[], where the dimension of the ith matrix is (arr[i-1] * arr[i]), the task is to find the most efficient way to multiply these matrices together such that the total number of element multiplications is minimum. When two matrices of size m*n and n*p when multiplied, they generate a matrix of size m*p and the number of multiplications performed is m*n*p.
 
-## Identification of Format
-- Input is a string or array
-- We will have to take a slice of the string(i to j), and then move a partition (k) from i to j.
-- Solve both the partitions to get temp answers, then calculate the final answer using temp ans.
-- Revisit after learning about MCM
+## Explain
 
-## Base Condition: Smallest valid or Invalid Input
-- Here we will think about invalid input.
-- i > j (meaning arr is now empty).
-
-## Calculate the temp answer
-- `k` will range from `i` to `j`.
-- and calculate the temp answer.
 
 ## Template Code
 ```java
@@ -31,4 +21,9 @@ int solve(int arr[], int i, int j) {
     
     return ans;
 }
+```
+
+## Code using Template
+```java
+
 ```
