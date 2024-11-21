@@ -49,6 +49,9 @@ int solve(int[] arr, int i, int j) {
 ## Calculate the cost of resultant matrix
 - How to get the cost of final last multiplication?
 ![alt 1text](Capture3.PNG)
+- 40 ==> arr[i - 1]
+- 30 ==> arr[k]
+- 30 ==> arr[j]
 
 ## Code using Template
 ```java
@@ -59,11 +62,14 @@ class MCM{
         
         int ans = Integer.MAX_VALUE;
         // Else, try all the possible values for `k`
-        for (int k = 0; k < j; k++) {
+        for (int k = i; k < j; k++) {
             // Temp 1 answer + Temp answer 2
-            solve(arr, i, k) +
-            solve(arr, k + 1, j);
+            int temp = solve(arr, i, k) +
+            solve(arr, k + 1, j) + arr[i-1] * arr[k] * arr[j];
+            ans = Math.min(ans, temp);
         }
+        
+        return ans;
     }
 }
 
