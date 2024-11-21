@@ -1,7 +1,7 @@
 # [<](../Readme.md) Matrix Chain Multiplication
 
 ## Related Problems (7)
-- [00 MCM](./Readme.md)
+- [00 MCM](./00-MCM/Readme.md)
 - [01 Printing MCM](./Readme.md)
 - [02 Evaluate Expression to True/Boolean Parenthesis](./Readme.md)
 - [03 Min/Max Value of Expression](./Readme.md)
