@@ -7,7 +7,6 @@ Given the dimension of a sequence of matrices in an array arr[], where the dimen
 ![alt text](Capture.PNG)
 ![alt 1text](Capture1.PNG)
 ![alt 1text](Capture2.PNG)
-![alt 1text](Capture3.PNG)
 
 ## Identify
 - We don't know what combination is correct!
@@ -49,7 +48,7 @@ int solve(int[] arr, int i, int j) {
 
 ## Calculate the cost of resultant matrix
 - How to get the cost of final last multiplication?
-- 
+![alt 1text](Capture3.PNG)
 
 ## Code using Template
 ```java
