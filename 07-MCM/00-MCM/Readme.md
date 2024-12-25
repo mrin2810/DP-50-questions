@@ -55,22 +55,51 @@ int solve(int[] arr, int i, int j) {
 
 ## Code using Template
 ```java
+
+
+```
+
+## MCM Bottom Up
+DP is nothing but, recursion with a cache.
+### Why it is needed?
+- We need DP when we have more than 2 recursive calls.
+- That is because we will have overlapping subproblems
+- Which can be cached/memoized.
+- We can call function on n - 1
+- We can reduce the work by saving it (in a table)
+### How to build a table?
+- First thing to figure out is dimensions or the table/matrix
+- We have to look at the recursive code
+  - Find where we have changes for the input?
+  - choose the 2 changing variables.
+  - that will become the size of the array
+- We want to store values now in this:
+  - initialize the matrix with -1. (Denoting not solved)
+  - we will only do the work when the value in matrix is -1.
+  - if not -1 => we have already solved the problem and we return that value
+  - else calculate and store in the matrix and then return
+### Changes
+We can now look at the changes:
+![img.png](img.png)
+return if not -1
+![img_1.png](img_1.png)
+sovle the problem, store in table t[i][j] and then return.
+```java
 class MCM{
-    public static int solve(int[] arr, int i, int j) {
+    public static int solveMemo(int[] arr, int i, int j, int[][] t) {
         // Base Condition j <= i (arr size 1 or less)
-        if (j <= i) return 0;
-        
-        int ans = Integer.MAX_VALUE;
-        // Else, try all the possible values for `k`
-        for (int k = i; k < j; k++) {
-            // Temp 1 answer + Temp answer 2
-            int temp = solve(arr, i, k) +
-            solve(arr, k + 1, j) + arr[i-1] * arr[k] * arr[j];
-            ans = Math.min(ans, temp);
+        if (t[i][j] == -1) {
+            if (j <= i) t[i][j] = 0;
+            int ans = Integer.MAX_VALUE;
+            // Else, try all the possible values for `k`
+            for (int k = i; k < j; k++) {
+                // Temp 1 answer + Temp answer 2
+                int temp = solve(arr, i, k, t) +
+                        solve(arr, k + 1, j, t) + arr[i - 1] * arr[k] * arr[j];
+                t[i][j] = Math.min(ans, temp);
+            }
         }
-        
-        return ans;
+        return t[i][j];
     }
 }
-
 ```
