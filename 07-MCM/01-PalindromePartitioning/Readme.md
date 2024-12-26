@@ -78,3 +78,44 @@ class Solution {
     }
 }
 ```
+
+## Optimize the code
+- We can now try and optimize this code using bottom up DP approach.
+- We are skipping the memoization step
+
+### Why Needed?
+- This is required because we will have overlapping solutions.
+- I think we have gotten the drill by now...
+
+### Code Variation
+1. Figure out the dimensions of the `dp`
+   - look for parameters that change these will help find the dimensions 
+   - `j` and `i` (depends on the string length)
+   - so the table will be from `n X n`
+2. Initialize the entire matrix with `-1`
+3. Check if `dp[i][j] == -1` then have the logic run and before returning save the answer in `dp` again
+4. If `dp[i][j] != -1` then return the stored value avoiding any repeat work.
+
+```java
+class Solution {
+  // dp has to be set to -1 before we start this algorithm
+  // i = 0
+  // j = len(s) - 1 when we start
+  
+    public static int solveMemo(String s, int i, int j, int[][] dp) {
+      if (dp[i][j] != -1) return dp[i][j];
+      if (i >= j) return 0;
+      if (isPalindrome(s, i, j)) {
+          dp[i][j] = 0;
+          return dp[i][j];
+      }
+      int mn = Integer.MAX_VALUE;
+      for (int k = i; k < j; k++) {
+        int temp = solveMemo(s, i, k, dp) + solveMemo(s, k + 1, j, dp) + 1;
+        mn = Math.min(mn, temp);
+      }
+      dp[i][j] = mn;
+      return mn;
+    }
+}
+```
