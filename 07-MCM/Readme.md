@@ -19,6 +19,6 @@
 - [01 Printing MCM](./Readme.md)
 - [02 Evaluate Expression to True/Boolean Parenthesis](./Readme.md)
 - [03 Min/Max Value of Expression](./Readme.md)
-- [04 Palindrome Partitioning](./Readme.md)
+- [04 Palindrome Partitioning](./01-PalindromwPartitioning/Readme.md)
 - [05 Scramble String](./Readme.md)
 - [06 Egg Dropping Problem](./Readme.md)
