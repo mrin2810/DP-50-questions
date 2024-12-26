@@ -36,7 +36,7 @@ class PalindromePartition{
         return mn;
     }
 
-    public static int solveMemoOpt(String s, int i, int j, int[][] dp) {
+    public static int solveMemoOptimized(String s, int i, int j, int[][] dp) {
         if (dp[i][j] != -1) return dp[i][j];
         if (i >= j) return 0;
         if (isPalindrome(s, i, j)) {
@@ -45,7 +45,19 @@ class PalindromePartition{
         }
         int mn = Integer.MAX_VALUE;
         for (int k = i; k < j; k++) {
-            int temp = solveMemoOpt(s, i, k, dp) + solveMemoOpt(s, k + 1, j, dp) + 1;
+            int left;
+            int right;
+            if (dp[i][k] != -1) {
+                left = dp[i][k];
+            } else {
+                left = solveMemoOptimized(s, i, k, dp);
+            }
+            if (dp[k + 1][j] != -1) {
+                right = dp[k + 1][j];
+            } else {
+                right = solveMemoOptimized(s, k+1, j, dp);
+            }
+            int temp = left + right + 1;
             mn = Math.min(mn, temp);
         }
         dp[i][j] = mn;
@@ -59,6 +71,7 @@ class PalindromePartition{
             }
         }
     }
+
     public static void main(String[] args) {
         String[] str = {"ababbbabbababa", "nitim", "nitin"};
         for (String s : str) {
@@ -67,7 +80,9 @@ class PalindromePartition{
             int n = s.length();
             int[][] dp = new int[n][n];
             memset(dp, -1);
-            System.out.println("\tMemoized: " + solveMemo(s, 0, n - 1, dp));
+            System.out.print("\tMemoized: " + solveMemo(s, 0, n - 1, dp));
+            memset(dp, -1);
+            System.out.println("\tMemoized Optimized: " + solveMemoOptimized(s, 0, n - 1, dp));
         }
     }
 }

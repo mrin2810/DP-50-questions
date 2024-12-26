@@ -119,3 +119,36 @@ class Solution {
     }
 }
 ```
+
+### More Optimized
+- We have to now optimize what we have here in memoized
+- We have to check subproblems as well
+```java
+    public static int solveMemoOptimized(String s, int i, int j, int[][] dp) {
+      if (dp[i][j] != -1) return dp[i][j];
+      if (i >= j) return 0;
+      if (isPalindrome(s, i, j)) {
+          dp[i][j] = 0;
+          return dp[i][j];
+      }
+      int mn = Integer.MAX_VALUE;
+      for (int k = i; k < j; k++) {
+        int left;
+        int right;
+        if (dp[i][k] != -1) {
+            left = dp[i][k];
+        } else {
+            left = solveMemo(s, i, k, dp);
+        }
+        if (dp[k + 1][j] != -1) {
+            right = dp[k + 1][j];
+        } else {
+            right = solveMemo(s, i, k, dp);
+        }
+        int temp = left + right + 1;
+        mn = Math.min(mn, temp);
+      }
+      dp[i][j] = mn;
+      return mn;
+    }
+```
