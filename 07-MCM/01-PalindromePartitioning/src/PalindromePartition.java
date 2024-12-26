@@ -36,16 +36,38 @@ class PalindromePartition{
         return mn;
     }
 
-    public static void main(String[] args) {
-        String s = "ababbbabbababa";
-        System.out.println(solve(s, 0, s.length() - 1));
-        int n = s.length();
-        int[][] dp = new int[n][n];
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                dp[i][j] = -1;
+    public static int solveMemoOpt(String s, int i, int j, int[][] dp) {
+        if (dp[i][j] != -1) return dp[i][j];
+        if (i >= j) return 0;
+        if (isPalindrome(s, i, j)) {
+            dp[i][j] = 0;
+            return dp[i][j];
+        }
+        int mn = Integer.MAX_VALUE;
+        for (int k = i; k < j; k++) {
+            int temp = solveMemoOpt(s, i, k, dp) + solveMemoOpt(s, k + 1, j, dp) + 1;
+            mn = Math.min(mn, temp);
+        }
+        dp[i][j] = mn;
+        return mn;
+    }
+
+    static void memset(int[][] dp, int val) {
+        for (int i = 0; i < dp.length; i++) {
+            for (int j = 0; j < dp[0].length; j++) {
+                dp[i][j] = val;
             }
         }
-        System.out.println(solveMemo(s, 0, n - 1, dp));
+    }
+    public static void main(String[] args) {
+        String[] str = {"ababbbabbababa", "nitim", "nitin"};
+        for (String s : str) {
+            System.out.println("String: " + s);
+            System.out.print("\tRecursive: " + solve(s, 0, s.length() - 1));
+            int n = s.length();
+            int[][] dp = new int[n][n];
+            memset(dp, -1);
+            System.out.println("\tMemoized: " + solveMemo(s, 0, n - 1, dp));
+        }
     }
 }
