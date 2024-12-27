@@ -1,4 +1,4 @@
-# [<](../Readme.md) 01 Palindrome Partitioning
+# [<](../Readme.md) 04 Palindrome Partitioning
 
 ## [Problem Statement](https://www.geeksforgeeks.org/palindrome-partitioning-dp-17/)
 Given a string s, the task is to find the minimum number of cuts needed for palindrome partitioning of the given string. A partitioning of the string is a palindrome partitioning if every sub-string of the partition is a palindrome.
