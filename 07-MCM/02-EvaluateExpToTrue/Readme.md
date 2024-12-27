@@ -106,9 +106,17 @@ Explanation: ((T^F)|F) and (T^(F|F)) are the only ways.
                  }
                  return ans;
             ```
+
+### Memoization Code ( Bottom Up DP)
+- Recursion + Table
+  - RTree => with more than 1 RC will have overlapping subproblems.
+- I need to have a 3D matrix (2 X M X N)
+- dimesions:
+  - `n X m X 2` => 2 is for either True or False
+  - Changing variables are i, j and isTrue
+- I will have to create a matrix of dimension (n X n X 2)
+- or 2 matrices of n X n
+- 
+
 ### Code
-```java
-class Solution {
-    
-}
-```
+[Java](./src/EvaluateExpToTrue.java)
