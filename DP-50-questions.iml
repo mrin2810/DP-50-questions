@@ -28,6 +28,7 @@
       <sourceFolder url="file://$MODULE_DIR$/07-MCM/00-MCM/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/07-MCM/02-EvaluateExpToTrue/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/07-MCM/04-PalindromePartitioning/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/07-MCM/05-ScrambleString/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
