@@ -110,3 +110,49 @@ public static boolean solve(String a, String b) {
   return flag;
 }
 ```
+
+## Convert it to Bottom Up DP
+- We will just add 4 lines to this code and convert it to memoized DP
+
+```text
+a: great
+b: rgate
+```
+
+### Why memoization is needed?
+- We have more than 1 recursive call
+- so, we will have overlapping sub-problems which we need to avoid re-calculating
+- Preventing recalculation is the way to go...
+
+### What DS do we use for memoization?
+- We will use a map, because it is going to be bigger that 2D.
+- Find the variables that are changing
+- Changing Variables "a" and "b"
+
+### Code Variation
+```java
+public static boolean solveMemo(String a, String b, Map<String, Boolean> hmap) {
+  if (a.compareTo(b) == 0) return true;
+  if (a.length() == 0 || b.length() == 0) return false;
+  if (a.length() == 1) return false;
+  String key = a + " " + b;
+  if (hmap.containsKey(key)) {
+    return hmap.get(key);
+  }
+  int n = a.length();
+  boolean flag = false;
+  for (int i = 1; i < n; i++) {
+    boolean swapped = solveMemo(a.substring(0, i), b.substring(n - i), hmap) == true
+            && solveMemo(b.substring(i), a.substring(0, n - i), hmap) == true;
+    boolean notSwapped = solveMemo(a.substring(0, i), b.substring(0, i), hmap) == true
+            && solveMemo(a.substring(i), b.substring(i), hmap) == true;
+
+    if (swapped || notSwapped){
+      flag = true;
+      break;
+    }
+  }
+  hmap.put(key, flag);
+  return flag;
+}
+```
