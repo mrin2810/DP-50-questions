@@ -114,13 +114,15 @@ public static int solveMemo(int eggs, int floors, HashMap<String, Integer> memo)
 
   // Loop over k values
   for (int k = 1; k <= floors; k++) {
+    // Level 2 -> Memoization Step 1
     String key1 = (eggs - 1) + "-" + (k - 1);
     String key2 = eggs + "-" + (floors - k);
-
+    // Level 2 -> Memoization Step 2
     if(!memo.containsKey(key1)) {
       memo.put(key1, solveMemo(eggs - 1, k - 1, memo));
     }
     int breaks = memo.get(key1);
+    // Level 2 -> Memoization Step 2
     if (!memo.containsKey(key2)) {
       memo.put(key2, solveMemo(eggs, floors - k, memo));
     }
