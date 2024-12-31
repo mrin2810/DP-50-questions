@@ -90,3 +90,48 @@ class EggDropping {
     }
 }
 ```
+
+## Memoized Approach
+To memoize lets use a map, instead of a traditional table.
+- Create a map to store computed results.
+- Pass the map
+- If answer is present in the map => return early
+- else compute the answer store it in the map and return the answer.
+```java
+// 4 Changes
+
+// Change 1 will be in main method. where memo is set to an empty hashmap.
+
+public static int solveMemo(int eggs, int floors, HashMap<String, Integer> memo) { // Change 2
+  // Setup all the base-cases
+  if (eggs == 1) return floors;
+  if (floors == 1 || floors == 0) return floors;
+  // Change 3
+  String key = eggs + "-" + floors;
+  if (memo.containsKey(key)) return memo.get(key);
+
+  int ans = Integer.MAX_VALUE;
+
+  // Loop over k values
+  for (int k = 1; k <= floors; k++) {
+    String key1 = (eggs - 1) + "-" + (k - 1);
+    String key2 = eggs + "-" + (floors - k);
+
+    if(!memo.containsKey(key1)) {
+      memo.put(key1, solveMemo(eggs - 1, k - 1, memo));
+    }
+    int breaks = memo.get(key1);
+    if (!memo.containsKey(key2)) {
+      memo.put(key2, solveMemo(eggs, floors - k, memo));
+    }
+    int doesntBreak = memo.get(key2);
+
+    int temp = 1 + Math.max(breaks, doesntBreak);
+    ans = Math.min(ans, temp);
+  }
+  // Change 4
+  memo.put(key, ans);
+  return ans;
+}
+
+```
