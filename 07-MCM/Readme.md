@@ -21,4 +21,4 @@
 - [03 Min/Max Value of Expression](./Readme.md)
 - [04 Palindrome Partitioning](./04-PalindromwPartitioning/Readme.md)
 - [05 Scramble String](./Readme.md)
-- [06 Egg Dropping Problem](./Readme.md)
+- [06 Egg Dropping Problem](./06-EggDropping/Readme.md)
